@@ -18,7 +18,7 @@ $("#cal-submit-button").on('click', function() {
       var bank = Number(vnPay);
       var spend = Number(ice) + Number(other);
       var cupsSold = (Number(totalCups) - Number(remainingCups) + Number(redundancyCups) - Number(missCups)) * 25;
-      var cash = cupsSold - (appOrder + bank + spend);
+      var cash = cupsSold - (appOrder + bank + spend) + Number(sellToping) - Number(buyToping);
 
       if((Number(money) - Number(cash)) > 0){
         var total =  Number(money)-Number(cash);
