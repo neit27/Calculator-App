@@ -5,8 +5,8 @@ $("#cal-submit-button").on('click', function() {
     var vnPay = $('#vn-pay-input').val();
     var ice = $('#ice-input').val();
     var other = $('#other-input').val();
-    var buyToping = $('#buy-toping').val();
-    var sellToping = $('#sell-toping').val();
+    var buyToping = $('#buy-toping-input').val();
+    var sellToping = $('#sell-toping-input').val();
     var totalCups = $('#total-cup-input').val();
     var remainingCups = $('#remaining-input').val();
     var redundancyCups = $('#redundancy-input').val();
@@ -18,13 +18,13 @@ $("#cal-submit-button").on('click', function() {
       var bank = Number(vnPay);
       var spend = Number(ice) + Number(other);
       var cupsSold = (Number(totalCups) - Number(remainingCups) + Number(redundancyCups) - Number(missCups)) * 25;
-      var cash = cupsSold - (appOrder + bank + spend) + Number(sellToping) - Number(buyToping);
+      var cash = cupsSold - (appOrder + bank + spend);
 
-      if((Number(money) - Number(cash)) > 0){
-        var total =  Number(money)-Number(cash);
+      if((Number(money) - Number(cash) + Number(sellToping) - Number(buyToping)) > 0){
+        var total =  Number(money)-Number(cash) + Number(sellToping) - Number(buyToping);
         return 'Dư ' + total + 'k mà không biết vì sao';
-      } else if((Number(money) - Number(cash)) < 0) {
-        var total =  Number(cash)-Number(money);
+      } else if((Number(money) - Number(cash) + Number(sellToping) - Number(buyToping)) < 0) {
+        var total =  Number(cash)-Number(money) + Number(sellToping) - Number(buyToping);
         return 'Thiếu ' +total + 'k rồi. Ét ô ét';
       } else {
         return 'Đủ tiền rồi, về thôi!';
