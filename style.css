@@ -2,3 +2,46 @@
     font-size: 28px;
     font-weight: bold;
 }
+.app-logo {
+    width: 40px;
+}
+
+.zone {
+    margin: 30px 0;
+}
+.zone-1>div {
+    width: 25%;
+}
+.zone-2 .spend  {
+    width: 50%;
+}
+.zone-2 .spend .ice {
+    width: 50%;
+}
+.zone-2 .spend .other {
+    width: 50%;
+}
+.zone-2 .toping  {
+    width: 50%;
+}
+.zone-2 .sell-toping  {
+    width: 50%;
+}
+.zone-2 .buy-toping  {
+    width: 50%;
+}
+.zone-3 .total-sell {
+    width: 50%;
+}
+.zone-3 .total-sell>div {
+    width: 50%;
+}
+.zone-3 .deviant {
+    width: 50%;
+}
+.zone-3 .deviant>div {
+    width: 50%;
+}
+.money .sale-money {
+    width: 100%;
+}

@@ -5,6 +5,8 @@ $("#cal-submit-button").on('click', function() {
     var vnPay = $('#vn-pay-input').val();
     var ice = $('#ice-input').val();
     var other = $('#other-input').val();
+    var buyToping = $('#buy-toping').val();
+    var sellToping = $('#sell-toping').val();
     var totalCups = $('#total-cup-input').val();
     var remainingCups = $('#remaining-input').val();
     var redundancyCups = $('#redundancy-input').val();
