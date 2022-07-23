@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="container my-5">
+            <h2 class="mx-3">Phần mềm tính tiền kết ca</h2>
+            <div id="app" class="app d-flex justify-content-start">
+                <div id="app-shopee" class="app-shopee mx-3">
+                    <div class="form-group">
+                      <label for="">Shopee</label>
+                      <input type="text" class="form-control" name="" id="app-shopee-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+                <div id="app-grab" class="app-grab mx-3">
+                    <div class="form-group">
+                        <label for="">Grab</label>
+                        <input type="text" class="form-control" name="" id="app-grab-input" aria-describedby="helpId" placeholder="">
+                      </div>
+                </div>
+                <div id="app-baemin" class="app-beamin mx-3">
+                    <div class="form-group">
+                        <label for="">Baemin</label>
+                        <input type="text" class="form-control" name="" id="app-baemin-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div id="transfer" class="transfer d-flex justify-content-start">
+                <div id="vn-pay" class="vn-pay mx-3">
+                    <div class="form-group">
+                        <label for="">VN Pay</label>
+                        <input type="text" class="form-control" name="" id="vn-pay-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div id="spend" class="spend d-flex justify-content-start">
+                <div id="ice" class="ice mx-3">
+                    <div class="form-group">
+                        <label for="">Tiền đá</label>
+                        <input type="text" class="form-control" name="" id="ice-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+                <div id="other" class="other mx-3">
+                    <div class="form-group">
+                        <label for="">Chi tiêu khác</label>
+                        <input type="text" class="form-control" name="" id="other-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div id="total-sell" class="total-sell d-flex justify-content-start">
+                <div id="total" class="total mx-3">
+                    <div class="form-group">
+                        <label for="">Tổng ly</label>
+                        <input type="text" class="form-control" name="" id="total-cup-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+                <div id="remaining" class="remaining mx-3">
+                    <div class="form-group">
+                        <label for="">Ly còn lại</label>
+                        <input type="text" class="form-control" name="" id="remaining-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div id="deviant" class="deviant d-flex justify-content-start">
+                <div id="redundancy" class="redundancy mx-3">
+                    <div class="form-group">
+                        <label for="">Ly dư</label>
+                        <input type="text" class="form-control" name="" id="redundancy-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+                <div id="miss" class="miss mx-3">
+                    <div class="form-group">
+                        <label for="">Ly hư</label>
+                        <input type="text" class="form-control" name="" id="miss-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div id="money" class="money d-flex justify-content-start">
+                <div id="sale-money" class="sale-money mx-3">
+                    <div class="form-group">
+                        <label for="">Tiền bán được</label>
+                        <input type="text" class="form-control" name="" id="money-input" aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <button id="cal-submit-button" type="button" class="btn btn-primary mx-3 my-3">Tính toán</button>
+            <div id="notify" class="text-danger mx-3"></div>
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
