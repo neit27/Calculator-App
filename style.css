@@ -7,41 +7,127 @@
 }
 
 .zone {
-    margin: 30px 0;
+    margin: 20px 0;
+}
+.zone-1 {
+    display: flex;
 }
 .zone-1>div {
+    margin: 0 1em;
     width: 25%;
 }
+.zone-2 {
+    display: flex;
+}
 .zone-2 .spend  {
+    display: flex;
     width: 50%;
 }
 .zone-2 .spend .ice {
     width: 50%;
+    margin: 0 1em;
 }
 .zone-2 .spend .other {
     width: 50%;
+    margin: 0 1em;
 }
 .zone-2 .toping  {
+    display: flex;
     width: 50%;
 }
 .zone-2 .sell-toping  {
     width: 50%;
+    margin: 0 1em;
 }
 .zone-2 .buy-toping  {
     width: 50%;
+    margin: 0 1em;
+}
+.zone-3 {
+    display: flex;
 }
 .zone-3 .total-sell {
     width: 50%;
+    display: flex;
 }
 .zone-3 .total-sell>div {
     width: 50%;
+    margin: 0 1em;
 }
 .zone-3 .deviant {
     width: 50%;
+    display: flex;
 }
 .zone-3 .deviant>div {
     width: 50%;
+    margin: 0 1em;
 }
 .money .sale-money {
     width: 100%;
+}
+div#box-money {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .zone-1 {
+        display: block !important;
+    }
+    .zone-1>div {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
+    .zone-2 {
+        display: block;
+    }
+    .zone-2 .spend {
+        display: block;
+        width: 100%;
+    }
+    .zone-2 .spend .ice {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
+    .zone-2 .spend .other {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
+    .zone-2 .toping  {
+        display: block;
+        width: 100%;
+    }
+    .zone-2 .sell-toping  {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
+    .zone-2 .buy-toping  {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
+    .zone-3 {
+        display: block;
+    }
+    .zone-3 .total-sell {
+        width: 100%;
+        display: block;
+    }
+    .zone-3 .deviant {
+        width: 100%;
+        display: block;
+    }
+    .zone-3 .total-sell>div {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
+    .zone-3 .deviant>div {
+        width: 100%;
+        margin: 0;
+        padding: 0 1em;
+    }
 }
