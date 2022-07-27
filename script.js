@@ -17,22 +17,28 @@ $(document).ready(function () {
     }
 
     $("#cal-submit-button").on('click', function () {
-        $('#notify').text(appCal());
+        $('#notify-zone').removeClass('d-none');
+        appCal()
         $('#statistical-submit-button').removeClass('d-none');
     });
     $("#statistical-submit-button").on('click', function () {
         statistical();
         $('#statistical').removeClass('d-none');
+        setTimeout(function(){
+            $('#statistical').addClass('d-none');
+        }, 30000);
     });
     function statistical() {
+        var today = new Date();
         var [shopee,grab,baemin,vnPay,ice,other,buyToping,sellToping,totalCups,remainingCups,redundancyCups,missCups,money] = getData();
         var s_shopee = Number(shopee) * 25;
         var s_grab = Number(grab) * 25;
         var s_baemin = Number(baemin) * 25;
         var s_money = (Number(totalCups) - Number(remainingCups)) * 25;
         var s_sellCups = Number(totalCups) - Number(remainingCups);
-
-        console.log(shopee);
+        var date = 'Ngày: ' + today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+        
+        $('#date').text(date);
         $('#id-s-shopee').text(s_shopee);
         $('#id-s-grab').text(s_grab);
         $('#id-s-baemin').text(s_baemin);
@@ -65,13 +71,17 @@ $(document).ready(function () {
         if (total > 0) {
             $('#notify').removeClass('text-danger');
             $('#notify').addClass('text-success');
-            return 'Dư ' + total + 'k';
+            $('#emoji').attr("src", "images/frog/hoang-hot.png");
+            $('#notify').text('Dư ' + total + 'k');
         } else if (total < 0) {
             total = Math.abs(total);
-            return 'Thiếu ' + total + 'k rồi. Ét ô ét';
+            $('#notify').text('Thiếu ' + total + 'k rồi. Ét ô ét');
+            $('#emoji').attr("src", "images/frog/hoang-hot.png");
         } else {
             $('#notify').removeClass('text-danger');
-            return 'Đã đủ tiền!';
+            $('#notify').addClass('text-success');
+            $('#emoji').attr("src", "images/frog/khoai-khoai.png");
+            $('#notify').text('Đã đủ tiền!');
         }
     }
 });
