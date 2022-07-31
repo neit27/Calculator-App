@@ -1,18 +1,18 @@
 $(document).ready(function () {
     function getData() {
-        var shopee = $('#app-shopee-input').val();
-        var grab = $('#app-grab-input').val();
-        var baemin = $('#app-baemin-input').val();
-        var vnPay = $('#vn-pay-input').val();
-        var ice = $('#ice-input').val();
-        var other = $('#other-input').val();
-        var buyToping = $('#buy-toping-input').val();
-        var sellToping = $('#sell-toping-input').val();
-        var totalCups = $('#total-cup-input').val();
-        var remainingCups = $('#remaining-input').val();
-        var redundancyCups = $('#redundancy-input').val();
-        var missCups = $('#miss-input').val();
-        var money = $('#money-input').val();
+        var shopee = $('#app-shopee-input').val() ? $('#app-shopee-input').val() : 0;
+        var grab = $('#app-grab-input').val() ? $('#app-grab-input').val() : 0;
+        var baemin = $('#app-baemin-input').val() ? $('#app-baemin-input').val() : 0;
+        var vnPay = $('#vn-pay-input').val() ? $('#vn-pay-input').val() : 0;
+        var ice = $('#ice-input').val() ? $('#ice-input').val() : 0;
+        var other = $('#other-input').val() ? $('#other-input').val() : 0;
+        var buyToping = $('#buy-toping-input').val() ? $('#buy-toping-input').val() : 0;
+        var sellToping = $('#sell-toping-input').val() ? $('#sell-toping-input').val() : 0;
+        var totalCups = $('#total-cup-input').val() ? $('#total-cup-input').val() : 0;
+        var remainingCups = $('#remaining-input').val() ? $('#remaining-input').val() : 0;
+        var redundancyCups = $('#redundancy-input').val() ? $('#redundancy-input').val() : 0;
+        var missCups = $('#miss-input').val() ? $('#miss-input').val() : 0;
+        var money = $('#money-input').val() ? $('#money-input').val() : 0;
         return [shopee,grab,baemin,vnPay,ice,other,buyToping,sellToping,totalCups,remainingCups,redundancyCups,missCups,money];
     }
 
@@ -31,11 +31,12 @@ $(document).ready(function () {
     function statistical() {
         var today = new Date();
         var [shopee,grab,baemin,vnPay,ice,other,buyToping,sellToping,totalCups,remainingCups,redundancyCups,missCups,money] = getData();
+        console.log(money);
         var s_shopee = Number(shopee) * 25;
         var s_grab = Number(grab) * 25;
         var s_baemin = Number(baemin) * 25;
-        var s_money = (Number(totalCups) - Number(remainingCups)) * 25;
-        var s_sellCups = Number(totalCups) - Number(remainingCups);
+        var s_money = (Number(totalCups) - Number(remainingCups) - Number(missCups) + Number(redundancyCups)) * 25;
+        var s_sellCups = Number(totalCups) - Number(remainingCups) ;
         var date = 'Ngày: ' + today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
         
         $('#date').text(date);

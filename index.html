@@ -126,7 +126,57 @@
             <div id="statistical" class="statistical d-none">
                 <h3 class="mx-3">Bảng thống kê</h3>
                 <p id="date" class=" mx-3">Ngày</p>
-                <div class="s-app d-flex">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Shopee</th>
+                            <th scope="col">Grab</th>
+                            <th scope="col">Beamin</th>
+                            <th scope="col">VN Pay</th>
+                            <th scope="col">Đá</th>
+                            <th scope="col">Chi tiêu khác</th>
+                            <th scope="col">Không lấy toping</th>
+                            <th scope="col">Mua thêm toping</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="id-s-shopee"></td>
+                            <td id="id-s-grab"></td>
+                            <td id="id-s-baemin"></td>
+                            <td id="id-s-vnpay"></td>
+                            <td id="id-s-ice"></td>
+                            <td id="id-s-other"></td>
+                            <td id="id-s-buy-toping"></td>
+                            <td id="id-s-sell-toping"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Tổng số ly</th>
+                            <th scope="col">Ly còn lại</th>
+                            <th scope="col">Ly bán được</th>
+                            <th scope="col">Ly dư</th>
+                            <th scope="col">Ly hư</th>
+                            <th scope="col">Tổng tiền bán được</th>
+                            <th scope="col">Tiền trong két</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="id-s-total-cups">Mark</td>
+                            <td id="id-s-remaining-cups">Mark</td>
+                            <td id="id-s-sell-cups">Mark</td>
+                            <td id="id-s-redundancy-cups">Mark</td>
+                            <td id="id-s-miss-cups">Mark</td>
+                            <td id="id-s-total-money">Mark</td>
+                            <td id="id-s-box-money">Mark</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <div class="s-app d-flex">
                     <div class="s-shopee d-flex mx-3">
                         <p>Shopee: </p>
                         <p id="id-s-shopee"></p>
@@ -161,8 +211,8 @@
                         <p>Mua thêm toping: </p>
                         <p id="id-s-sell-toping"></p>
                     </div>
-                </div>
-                <div class="s-cups d-flex">
+                </div> -->
+                <!-- <div class="s-cups d-flex">
                     <div class="s-total-cups d-flex mx-3">
                         <p>Tổng số ly: </p>
                         <p id="id-s-total-cups"></p>
@@ -193,7 +243,7 @@
                         <p>Tiền trong két: </p>
                         <p id="id-s-box-money"></p>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div id="notify-zone" class="d-none mx-3">
                 <p id="notify" class="text-danger"></p>
